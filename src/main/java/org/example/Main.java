@@ -185,13 +185,14 @@ class Statistics{
     }
 
     public Statistics(List<Double> dataset, boolean isPopulation){
+        this.dataset = dataset;
+
         if(isPopulation){
             populationDeviation = mDeviation(0);
         }
         else{
             populationDeviation = null;
         }
-        this.dataset = dataset;
     }
 
     public Statistics(Double cachedStd, boolean isPopulation, Double cachedMean, int size){
